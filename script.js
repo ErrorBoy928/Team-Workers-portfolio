@@ -10,4 +10,12 @@ toggleBtn.addEventListener("click", () => {
   } else {
     toggleBtn.textContent = "Switch to Dark Theme";
   }
+
 });
+
+//preloader
+window.addEventListener("load" , () => {
+  const preloader = 
+document.getElementById("preloader");
+  preloader.classList.add("hide");
+})
