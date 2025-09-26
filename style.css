@@ -70,17 +70,17 @@ body {
   color: var(--text-color);
   text-align: center;
   transition: background 0.3s, color 0.3s;
-
-  overflow-y: hidden;             
-  -ms-overflow-style: none;     
-  scrollbar-width: none;     
 }
 
 body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-  background: transparent;
+  display: none;                 /* Chrome, Safari, Edge */
 }
+
+
+body::-webkit-scrollbar {
+  display: none;                 /* Chrome/Safari hides scrollbar */
+}
+
 
 
 header {
@@ -175,4 +175,18 @@ footer {
 }
 
 
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  overflow-y: auto;
+  -ms-overflow-style: none; 
+  scrollbar-width: none;     
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;             
+}
 
