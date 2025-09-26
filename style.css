@@ -71,19 +71,17 @@ body {
   text-align: center;
   transition: background 0.3s, color 0.3s;
 
-
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  overflow-y: scroll;
-
+  overflow-y: auto;             
+  -ms-overflow-style: none;     
+  scrollbar-width: none;     
 }
-
-  
 
 body::-webkit-scrollbar {
-  display: none;
+  width: 0;
+  height: 0;
+  background: transparent;
 }
+
 
 header {
   padding: 2rem;
@@ -175,4 +173,5 @@ footer {
   background: var(--footer-bg);
   font-size: 0.9rem;
 }
+
 
