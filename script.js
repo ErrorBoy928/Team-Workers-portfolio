@@ -3,27 +3,18 @@ const body = document.body;
 
 toggleBtn.addEventListener("click", () => {
   body.classList.toggle("dark");
-  
-  // Change button text based on theme
+
   if (body.classList.contains("dark")) {
     toggleBtn.textContent = "Switch to Light Theme";
   } else {
     toggleBtn.textContent = "Switch to Dark Theme";
   }
-
 });
 
 // Preloader
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
-  setTimeout(()=>{
-  preloader.classList.add("hidden");
-  },2000)
+  setTimeout(() => {
+    preloader.classList.add("hidden");
+  }, 2000);
 });
-
-// Theme Toggle
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
-});
-
