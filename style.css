@@ -1,6 +1,6 @@
 /* Preloader */
 #preloader {
-  position: fixed;
+  position: static;
   top: 0;
   left: 0;
   width: 100%;
@@ -161,4 +161,5 @@ footer {
   font-size: 0.9rem;
 
 }
+
 
