@@ -13,9 +13,17 @@ toggleBtn.addEventListener("click", () => {
 
 });
 
-//preloader
-window.addEventListener("load" , () => {
-  const preloader = 
-document.getElementById("preloader");
-  preloader.classList.add("hide");
-})
+// Preloader
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  setTimeout(()=>{
+  preloader.classList.add("hidden");
+  },2000)
+});
+
+// Theme Toggle
+const themeToggle = document.getElementById("theme-toggle");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+});
+
