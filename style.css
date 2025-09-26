@@ -1,6 +1,6 @@
 /* Preloader */
 #preloader {
-  position: absolute;
+  position: fixed; /* Covers the whole viewport */
   top: 0;
   left: 0;
   width: 100vw;
@@ -12,14 +12,26 @@
   z-index: 9999;
   transition: opacity 0.5s ease, visibility 0.5s ease;
 }
+
 .loader {
-  width: 100vw;
-  height: 100vh;
-  border: none;
-  background: #000000;
-  /* border-top: 6px solid #00ffcc; */
-  /* border-radius: 50%; */
+  width: 80px;
+  height: 80px;
+  border: 6px solid #333;          /* background ring */
+  border-top: 6px solid #00ffcc;   /* spinning color */
+  border-radius: 50%;
   animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Hidden state (after loading) */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* CSS Variables */
@@ -148,23 +160,5 @@ footer {
   margin-top: 2rem;
   padding: 1rem;
   background: var(--footer-bg);
-  
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Hidden state (after loading) */
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
   font-size: 0.9rem;
-
 }
-
-
-
-
-
-
