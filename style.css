@@ -70,6 +70,19 @@ body {
   color: var(--text-color);
   text-align: center;
   transition: background 0.3s, color 0.3s;
+
+
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+
+}
+
+  
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 header {
@@ -162,3 +175,4 @@ footer {
   background: var(--footer-bg);
   font-size: 0.9rem;
 }
+
